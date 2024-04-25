@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Timer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <h2>Task Timer</h2>
+
+  <label for="taskInput">Task:</label>
+  <input type="text" id="taskInput" placeholder="Enter task">
+
+  <label for="destinationInput">Destination:</label>
+  <input type="text" id="destinationInput" placeholder="Enter destination">
+
+  <br><br>
+
+  <button id="timerButton" onclick="toggleTimer()">Start</button>
+
+  <p id="timer">00:00:00</p>
+
+  <table id="taskTable">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Destination</th>
+        <th>Total Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Task records will be inserted here dynamically -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
