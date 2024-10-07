@@ -5,7 +5,15 @@ let hours = 0;
 let isTimerRunning = false;
 
 function toggleTimer() {
+  const taskInput = document.getElementById('taskInput').value;
+  const destinationInput = document.getElementById('destinationInput').value;
   const timerButton = document.getElementById('timerButton');
+
+  // Validation: Check if task and destination fields are not empty
+  if (!isTimerRunning && (taskInput === "" || destinationInput === "")) {
+    alert("Please enter both Task and Destination.");
+    return;  // Do not proceed with starting the timer
+  }
 
   if (isTimerRunning) {
     stopTimer();
@@ -85,4 +93,3 @@ function resetTimer() {
   document.getElementById('taskInput').value = '';
   document.getElementById('destinationInput').value = '';
 }
-
